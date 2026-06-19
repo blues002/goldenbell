@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 화성 리딩시티 독서골든벨</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="홈으로 이동">
+      2026 독서골든벨
+      <span>화성시작은도서관연합회</span>
+    </a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#books">선정도서</a>
+      <a href="#apply">신청/자료</a>
+      <a href="#programs">프로그램</a>
+      <a href="#author">작가와의 만남</a>
+      <a class="admin-link" href="./admin.html">admin</a>
+    </nav>
+  </header>
+
+  <section id="top" class="hero">
+    <div class="hero-layout">
+      <div class="hero-inner">
+        <p class="eyebrow">2026년 작은도서관 활성화 지원 · 리딩시티 화성</p>
+        <h1>2026 화성 리딩시티<br>독서골든벨</h1>
+        <p class="lead">책으로 만나고, 퀴즈로 하나 되는 화성의 독서문화 축제</p>
+        <p class="hero-copy">
+          선정도서를 함께 읽고 독서골든벨, 체험부스, 공연, 작가와의 만남으로 이어지는
+          화성시 독서진흥사업 안내 홈페이지입니다.
+        </p>
+        <div class="actions">
+          <a id="goldenbellApplyHero" class="button primary" href="#apply">독서골든벨 신청</a>
+          <a class="button" href="#books">선정도서 보기</a>
+          <a id="questionsHero" class="button warning" href="#apply">예상문제 받기</a>
+        </div>
+      </div>
+      <aside class="hero-poster" aria-label="독서골든벨 포스터 슬라이드">
+        <button id="posterSlider" class="poster-slider" type="button" aria-label="다음 포스터 보기">
+          <img class="poster-slide is-active" src="./poster.png" alt="2026 화성 리딩시티 독서골든벨 선정도서 포스터">
+          <img class="poster-slide" src="./guide-poster.png" alt="제2회 2026 가족 독서 골든벨 1차 안내 포스터">
+        </button>
+        <div class="poster-controls" aria-label="포스터 선택">
+          <button class="poster-dot is-active" type="button" data-poster-index="0" aria-label="선정도서 포스터 보기"></button>
+          <button class="poster-dot" type="button" data-poster-index="1" aria-label="1차 안내 포스터 보기"></button>
+        </div>
+        <p id="posterCaption">선정도서 15권을 한눈에 확인할 수 있습니다. 클릭하면 안내 포스터로 전환됩니다.</p>
+      </aside>
+    </div>
+    <div class="quick-facts" aria-label="행사 핵심 정보">
+      <div class="fact"><strong>일시</strong><span>2026년 8월 22일 토요일 1시 예정</span></div>
+      <div class="fact"><strong>장소</strong><span>나래울종합사회복지관</span></div>
+      <div class="fact"><strong>주관</strong><span>화성시작은도서관연합회</span></div>
+      <div class="fact"><strong>대상</strong><span>화성시 어린이·청소년 및 가족</span></div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section" aria-labelledby="intro-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="intro-title">독서진흥사업으로 이어지는 골든벨</h2>
+            <p>
+              2026 독서골든벨은 단순한 퀴즈 행사가 아니라 선정도서 읽기, 작은도서관 방문,
+              지역서점 연계, 작가와의 만남까지 확장되는 리딩시티 화성 프로그램입니다.
+            </p>
+          </div>
+        </div>
+        <div class="program-grid">
+          <article class="program-card">
+            <span class="status planned">선정도서 15권</span>
+            <h3>5개 주제별 함께 읽기</h3>
+            <p class="muted">역사, 화성, 판타지/SF, 환경, 문화예술 주제별 3권씩 총 15권을 읽습니다.</p>
+          </article>
+          <article class="program-card">
+            <span class="status planned">지역 독서문화</span>
+            <h3>작은도서관과 지역서점 연결</h3>
+            <p class="muted">선정도서 홍보와 독서 활동이 지역 독서생태계 안에서 이어지도록 구성합니다.</p>
+          </article>
+          <article class="program-card">
+            <span class="status pending">추후 공지 예정</span>
+            <h3>시상 및 세부 운영</h3>
+            <p id="awardNotice" class="muted">시상금 및 등수별 지급 기준은 추후 공지 예정입니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="howto" class="section howto-section" aria-labelledby="howto-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="howto-title">골든벨 즐기는 방법</h2>
+            <p>6월부터 가까운 작은도서관에서 선정도서를 읽고 스탬프를 모으며 독서골든벨을 준비해보세요.</p>
+          </div>
+        </div>
+        <div id="howToEnjoy" class="howto-grid"></div>
+      </div>
+    </section>
+
+    <section id="books" class="section" aria-labelledby="books-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="books-title">리딩시티 선정도서</h2>
+            <p>포스터 기준 5개 주제, 총 15권입니다. 책 카드를 클릭하면 홈페이지 안에서 책 소개와 읽기 포인트를 볼 수 있습니다.</p>
+          </div>
+        </div>
+        <div id="bookGroups" class="books-layout"></div>
+      </div>
+    </section>
+
+    <section id="apply" class="section" aria-labelledby="apply-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="apply-title">신청서와 예상문제</h2>
+            <p>네이버폼 또는 구글폼 신청 링크를 연결하고, 예상문제 파일은 준비되는 대로 다운로드 자료로 제공합니다.</p>
+          </div>
+        </div>
+        <div class="notice-grid">
+          <article class="notice-card">
+            <span class="status planned">참가자 신청</span>
+            <h3>독서골든벨 신청서</h3>
+            <p id="goldenbellOpenNotice" class="muted">참가 신청은 7월 20일 오픈 예정입니다.</p>
+            <a id="goldenbellApply" class="button primary" href="#">신청서 링크 준비 중</a>
+          </article>
+          <article class="notice-card">
+            <span class="status pending">자료실</span>
+            <h3>예상문제 파일</h3>
+            <p class="muted">예상문제 PDF 또는 문서 파일이 준비되면 다운로드 버튼으로 제공합니다.</p>
+            <a id="questionsDownload" class="button warning" href="#">예상문제 파일 추후 업로드</a>
+          </article>
+          <article class="notice-card">
+            <span class="status planned">작은도서관</span>
+            <h3>체험부스 신청</h3>
+            <p class="muted">화성시 내 작은도서관이면 화도연 회원 여부와 관계없이 신청할 수 있습니다.</p>
+            <a id="boothApply" class="button" href="#">체험부스 신청 링크 준비 중</a>
+          </article>
+          <article class="notice-card">
+            <span class="status pending">홍보물품</span>
+            <h3>선정도서 홍보물품</h3>
+            <p class="muted">포스터, 스탬프북, 스탬프, 선정도서 스티커 배부 안내는 권역별 공지에 따라 진행됩니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="section" aria-labelledby="program-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="program-title">주요 프로그램</h2>
+            <p>확정된 내용은 명확히 표시하고, 협의 중인 항목은 추후 공지 예정으로 안내합니다.</p>
+          </div>
+        </div>
+        <div class="program-grid">
+          <article class="program-card">
+            <span class="status">1개 부스 확정</span>
+            <h3>체험부스</h3>
+            <p id="boothNotice" class="muted">체험부스는 두빛나래 캐리커처 1개 부스가 확정되었으며, 나머지 세부 구성은 추후 공지 예정입니다.</p>
+          </article>
+          <article class="program-card">
+            <span class="status planned">진행 예정</span>
+            <h3>공연 2팀</h3>
+            <p id="performanceNotice" class="muted">공연 2팀을 진행 예정이며, 팀명과 시간은 추후 공지 예정입니다.</p>
+          </article>
+          <article class="program-card">
+            <span class="status pending">추후 공지 예정</span>
+            <h3>시상금</h3>
+            <p class="muted">수상 인원, 등수별 시상 기준, 지역서점 연계 방식은 확정 후 안내합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="author" class="section" aria-labelledby="author-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="author-title">선정도서 작가와의 만남</h2>
+            <p id="authorTalkNotice">
+              선정도서 작가 섭외가 진행 중이며, 동부 2회·서부 2회로 운영 예정입니다. 날짜와 장소는 추후 공지 예정입니다.
+            </p>
+          </div>
+        </div>
+        <div id="authorMeetingCards" class="author-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="schedule-title">
+      <div class="section-inner">
+        <div class="section-title">
+          <div>
+            <h2 id="schedule-title">향후 일정</h2>
+            <p>현재 미정인 일정은 확정되는 대로 홈페이지에 반영합니다.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item"><strong>6월 중</strong><span>모집 사전 공지</span></div>
+          <div class="timeline-item"><strong>7월 중</strong><span>신청 접수 예정</span></div>
+          <div class="timeline-item"><strong>7월~8월 초</strong><span>선정 결과 안내</span></div>
+          <div class="timeline-item"><strong>행사 전</strong><span>예상문제 및 세부 안내</span></div>
+          <div class="timeline-item"><strong>8월 22일</strong><span>독서골든벨 행사</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <strong>2026 화성 리딩시티 독서골든벨</strong>
+      <p>주관: 화성시작은도서관연합회 · 문의처와 세부 일정은 추후 공지 예정입니다.</p>
+    </div>
+  </footer>
+
+  <div id="bookModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="닫기">×</button>
+      <div class="modal-content">
+        <div class="modal-cover-wrap">
+          <img id="modalCover" src="" alt="">
+        </div>
+        <div>
+          <p id="modalCategory" class="modal-category"></p>
+          <h2 id="modalTitle"></h2>
+          <p id="modalMeta" class="modal-meta"></p>
+          <h3>책 소개</h3>
+          <p id="modalSummary"></p>
+          <h3>읽기 포인트</h3>
+          <p id="modalPoint"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 const DEFAULT_SITE_DATA = {
+  siteVersion: 2,
   forms: {
     goldenbell: "",
     booth: "",
@@ -16,7 +17,7 @@ const DEFAULT_SITE_DATA = {
     },
     {
       title: "골든벨 참여 혜택 챙기기",
-      text: "스탬프 도장을 최소 5개 이상 받은 참여자는 골든벨 참여 시 가산점을 받거나, 행사 당일 선착순 지급 선물을 받을 수 있도록 준비 중입니다."
+      text: "스탬프 도장 5개 이상이면 행사 당일 선착순 100명 선물을 받을 수 있습니다. 골든벨 참여자는 도장 1개당 10점씩, 최대 150점까지 가산점을 받을 수 있습니다."
     },
     {
       title: "선정도서 작가 만나기",
@@ -108,7 +109,12 @@ function loadSiteData() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (!saved) return cloneDefaultData();
-    return mergeSiteData(cloneDefaultData(), JSON.parse(saved));
+    const parsed = JSON.parse(saved);
+    if (parsed.siteVersion !== DEFAULT_SITE_DATA.siteVersion) {
+      resetSiteData();
+      return cloneDefaultData();
+    }
+    return mergeSiteData(cloneDefaultData(), parsed);
   } catch (error) {
     console.warn("Saved site data could not be loaded.", error);
     return cloneDefaultData();

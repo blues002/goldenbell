@@ -213,6 +213,27 @@ h1 {
   letter-spacing: 0;
 }
 
+.hero-event-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -4px 0 24px;
+}
+
+.hero-event-line span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 14px;
+  border: 1px solid rgba(7, 29, 79, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--navy);
+  font-size: 16px;
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(7, 29, 79, 0.08);
+}
+
 .lead {
   max-width: 790px;
   color: #273847;
@@ -276,14 +297,14 @@ h1 {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px;
   max-width: 1180px;
   margin: 70px auto 0;
 }
 
 .fact {
-  min-height: 126px;
+  min-height: 112px;
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 20px;
@@ -301,7 +322,7 @@ h1 {
 
 .fact span {
   color: var(--navy);
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 900;
   line-height: 1.35;
 }
@@ -339,6 +360,46 @@ main {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
+}
+
+.event-gallery-section {
+  background: #fffdf7;
+}
+
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.event-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #f2d48e;
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 16px 34px rgba(7, 29, 79, 0.08);
+}
+
+.event-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  image-rendering: pixelated;
+  filter: blur(1.2px) saturate(0.92) contrast(0.96);
+  transform: scale(1.01);
+}
+
+.event-gallery figcaption {
+  padding: 14px 16px 16px;
+  color: var(--navy);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+#boothNotice {
+  white-space: pre-line;
 }
 
 .program-grid {
@@ -927,6 +988,7 @@ textarea {
 
   .quick-facts,
   .program-grid,
+  .event-gallery,
   .howto-grid,
   .book-list,
   .author-grid,

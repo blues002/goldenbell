@@ -276,7 +276,7 @@ h1 {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 14px;
   max-width: 1180px;
   margin: 70px auto 0;

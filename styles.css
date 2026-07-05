@@ -391,6 +391,12 @@ main {
   transform: scale(1.01);
 }
 
+.event-gallery img.is-clear {
+  image-rendering: auto;
+  filter: none;
+  transform: none;
+}
+
 .event-gallery figcaption {
   padding: 14px 16px 16px;
   color: var(--navy);

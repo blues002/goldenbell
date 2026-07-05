@@ -398,7 +398,9 @@ main {
   font-weight: 900;
 }
 
-#boothNotice {
+#boothNotice,
+#awardNotice,
+.prize-copy {
   white-space: pre-line;
 }
 

@@ -15,6 +15,8 @@
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#books">선정도서</a>
       <a href="#apply">신청/자료</a>
+      <a href="#awards">시상</a>
+      <a href="#booth">체험부스</a>
       <a href="#programs">프로그램</a>
       <a href="#author">작가와의 만남</a>
       <a class="admin-link" href="./admin.html">admin</a>
@@ -36,6 +38,17 @@
           선정도서를 함께 읽고 독서골든벨, 체험부스, 공연, 작가와의 만남으로 이어지는
           화성시 독서진흥사업 안내 홈페이지입니다.
         </p>
+        <div id="awards" class="hero-prize" aria-label="독서골든벨 시상 안내">
+          <div class="hero-prize-heading">
+            <span>시상 확정</span>
+            <strong>총 70만원 도서상품권</strong>
+          </div>
+          <div class="hero-prize-list">
+            <div><strong>1등</strong><span>30만원 · 1명</span></div>
+            <div><strong>2등</strong><span>10만원 · 2명</span></div>
+            <div><strong>3등</strong><span>5만원 · 4명</span></div>
+          </div>
+        </div>
         <div class="actions">
           <a id="goldenbellApplyHero" class="button primary" href="#apply">독서골든벨 신청</a>
           <a class="button" href="#books">선정도서 보기</a>
@@ -58,7 +71,8 @@
       <div class="fact"><strong>날짜</strong><span>2026년 8월 22일 토요일</span></div>
       <div class="fact"><strong>독서골든벨 시간</strong><span>2-4시</span></div>
       <div class="fact"><strong>체험부스 시간</strong><span>1-4시</span></div>
-      <div class="fact"><strong>체험부스</strong><span>다원이음터 캐리커처 등</span></div>
+      <div class="fact"><strong>시상</strong><span>1등 30만원 · 총 70만원</span></div>
+      <div class="fact"><strong>체험부스</strong><span>작은도서관 부스 모집 중</span></div>
       <div class="fact"><strong>장소</strong><span>나래울종합사회복지관</span></div>
     </div>
   </section>
@@ -86,10 +100,10 @@
             <h3>작은도서관과 지역서점 연결</h3>
             <p class="muted">선정도서 홍보와 독서 활동이 지역 독서생태계 안에서 이어지도록 구성합니다.</p>
           </article>
-          <article class="program-card">
+          <article class="program-card prize-card">
             <span class="status planned">확정</span>
             <h3>시상 및 세부 운영</h3>
-            <p id="awardNotice" class="muted">지역서점 후원 도서상품권 총 70만원<br>1등 30만원 1명 · 2등 10만원 2명 · 3등 5만원 4명<br>후원 서점: 삼성문고, 나래문고, 태안문고, 중앙문고, 센트럴문고, 학우당, 길이열리는 서점</p>
+            <p id="awardNotice" class="muted">지역서점 후원 도서상품권 총 70만원<br>1등 30만원 도서상품권 1명<br>2등 10만원 도서상품권 2명<br>3등 5만원 도서상품권 4명<br>후원 서점: 삼성문고, 나래문고, 태안문고, 중앙문고, 센트럴문고, 학우당, 길이열리는 서점</p>
           </article>
         </div>
       </div>
@@ -128,7 +142,13 @@
             <p>6월부터 가까운 작은도서관에서 선정도서를 읽고 스탬프를 모으며 독서골든벨을 준비해보세요.</p>
           </div>
         </div>
-        <div id="howToEnjoy" class="howto-grid"></div>
+        <div class="howto-layout">
+          <figure class="stamp-kit-figure">
+            <img src="./stamp-kit-photo.png" alt="독서골든벨 스탬프 카드, 도장, 선정도서 스티커 배부 세트">
+            <figcaption>스탬프 카드와 도장으로 독서골든벨 참여를 준비해요.</figcaption>
+          </figure>
+          <div id="howToEnjoy" class="howto-grid"></div>
+        </div>
       </div>
     </section>
 
@@ -165,10 +185,10 @@
             <p class="muted">예상문제 PDF 또는 문서 파일이 준비되면 다운로드 버튼으로 제공합니다.</p>
             <a id="questionsDownload" class="button warning" href="#">예상문제 파일 추후 업로드</a>
           </article>
-          <article class="notice-card">
+          <article id="booth" class="notice-card booth-card">
             <span class="status planned">작은도서관</span>
             <h3>체험부스 신청</h3>
-            <p class="muted">화성시 내 작은도서관이면 화도연 회원 여부와 관계없이 신청할 수 있습니다.</p>
+            <p class="muted">화성시 작은도서관 소속 대상입니다. 재료비 20만원과 자원봉사점수가 지원되며, 개인 참가자는 신청할 수 없습니다.</p>
             <a id="boothApply" class="button" href="#">체험부스 신청 링크 준비 중</a>
           </article>
           <article class="notice-card">
@@ -189,20 +209,20 @@
           </div>
         </div>
         <div class="program-grid">
-          <article class="program-card">
+          <article class="program-card booth-info-card">
             <span class="status">1개 부스 확정</span>
             <h3>체험부스</h3>
-            <p id="boothNotice" class="muted">체험부스 시간: 1-4시<br>체험부스: 다원이음터 캐리커처 등</p>
+            <p id="boothNotice" class="muted">체험부스 시간: 1-4시<br>대상: 화성시 작은도서관 소속<br>지원: 체험부스 재료비 20만원, 자원봉사점수 지급<br>모집: 6월 22일 오전 9시 ~ 7월 13일 오후 6시<br>발표: 7월 15일, 개별 문자 및 화도연 공식 인스타그램 게시<br>예시: 책갈피 만들기, 에코백 꾸미기, 북아트 활동, 독서퀴즈 부스</p>
           </article>
           <article class="program-card">
             <span class="status planned">진행 예정</span>
             <h3>공연 2팀</h3>
             <p id="performanceNotice" class="muted">공연 2팀을 진행 예정이며, 팀명과 시간은 추후 공지 예정입니다.</p>
           </article>
-          <article class="program-card">
+          <article class="program-card prize-card">
             <span class="status planned">확정</span>
             <h3>시상금</h3>
-            <p class="muted prize-copy">지역서점 후원 도서상품권 총 70만원<br>1등 30만원 1명 · 2등 10만원 2명 · 3등 5만원 4명<br>후원 서점: 삼성문고, 나래문고, 태안문고, 중앙문고, 센트럴문고, 학우당, 길이열리는 서점</p>
+            <p class="muted prize-copy">지역서점 후원 도서상품권 총 70만원<br>1등 30만원 도서상품권 1명<br>2등 10만원 도서상품권 2명<br>3등 5만원 도서상품권 4명<br>후원 서점: 삼성문고, 나래문고, 태안문고, 중앙문고, 센트럴문고, 학우당, 길이열리는 서점</p>
           </article>
         </div>
       </div>
@@ -269,7 +289,7 @@
     </article>
   </div>
 
-  <script src="./data.js?v=stamp-benefit-20260619"></script>
-  <script src="./main.js?v=stamp-benefit-20260619"></script>
+  <script src="./data.js?v=prize-booth-20260705"></script>
+  <script src="./main.js?v=prize-booth-20260705"></script>
 </body>
 </html>

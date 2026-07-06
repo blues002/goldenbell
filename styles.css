@@ -496,7 +496,7 @@ main {
 
 .howto-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.35fr);
+  grid-template-columns: 1fr;
   gap: 22px;
   align-items: stretch;
 }
@@ -513,8 +513,9 @@ main {
 .stamp-kit-figure img {
   display: block;
   width: 100%;
-  height: min(420px, 42vw);
-  object-fit: cover;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
   object-position: center;
   border-radius: 16px;
 }

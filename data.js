@@ -1,8 +1,8 @@
 const DEFAULT_SITE_DATA = {
-  siteVersion: 3,
+  siteVersion: 5,
   forms: {
     goldenbell: "",
-    booth: "https://naver.me/5NeVx3U5",
+    booth: "",
     questions: "",
     goldenbellOpenText: "7월 20일 오픈 예정"
   },
@@ -20,7 +20,7 @@ const DEFAULT_SITE_DATA = {
     {
       icon: "선물",
       title: "골든벨 참여 혜택 챙기기",
-      text: "스탬프 도장 5개 이상이면 행사 당일 선착순 100명 선물을 받을 수 있습니다. 골든벨 참여자는 도장 1개당 10점씩, 최대 150점까지 가산점을 받을 수 있습니다."
+      text: "스탬프 도장 5개 이상이면 선착순 100명 한정 선물을 받을 수 있습니다. 골든벨 참여자는 도장 1개당 10점씩 최대 150점까지 가산점을 받고, 참가자 전원에게 아코디언 의자를 드립니다."
     },
     {
       icon: "작가",
@@ -30,28 +30,59 @@ const DEFAULT_SITE_DATA = {
   ],
   notice: {
     award: "지역서점 후원 도서상품권 총 70만원\n1등 30만원 도서상품권 1명\n2등 10만원 도서상품권 2명\n3등 5만원 도서상품권 4명\n후원 서점: 삼성문고, 나래문고, 태안문고, 중앙문고, 센트럴문고, 학우당, 길이열리는 서점",
-    booth: "체험부스 시간: 1-4시\n대상: 화성시 작은도서관 소속\n지원: 체험부스 재료비 20만원, 자원봉사점수 지급\n모집: 6월 22일 오전 9시 ~ 7월 13일 오후 6시\n발표: 7월 15일, 개별 문자 및 화도연 공식 인스타그램 게시\n예시: 책갈피 만들기, 에코백 꾸미기, 북아트 활동, 독서퀴즈 부스",
-    performance: "공연 2팀을 진행 예정이며, 팀명과 시간은 추후 공지 예정입니다.",
-    authorTalk: "작가와의 만남은 만세구·효행구·병점구·동탄구에서 각 1회씩 진행 예정입니다. 만세구는 최지안 작가님 섭외가 완료되었으며, 2026년 9월 5일 토요일 오전 10시~12시 30분에 진행 예정입니다. 장소는 송린이음터 섭외 중입니다."
+    booth: "체험부스 13:00~16:00\n총 7개 부스 선정 완료\n다원이음터도서관 체험부스 후원",
+    performance: "특별공연 판소리\n2026년 8월 22일 토요일 16:00부터",
+    authorTalk: "작가와의 만남은 만세구·효행구·병점구·동탄구에서 각 1회씩 진행합니다. 만세구·병점구·동탄구 일정이 확정되었으며, 효행구는 추후 공지 예정입니다."
   },
+  booths: [
+    { library: "생각마루 작은도서관", activity: "페이스페인팅" },
+    { library: "꽃담 작은도서관", activity: "불꾸" },
+    { library: "우리꿈 작은도서관", activity: "장명루 실팔찌" },
+    { library: "포도나무 작은도서관", activity: "컵 홀더" },
+    { library: "목동 베라체 작은도서관", activity: "응원봉" },
+    { library: "하늘 작은도서관", activity: "책갈피 만들기" },
+    { library: "다원이음터도서관", activity: "캐리커처", sponsor: true }
+  ],
   authorMeetings: [
     {
+      district: "만세구",
       author: "최지안",
       honorific: "최지안 작가님",
       bookTitle: "빨간돌을 찾아줘",
       bookCover: "./covers/find-red-stone.png",
       authorPhoto: "",
-      status: "섭외 완료",
-      note: "만세구 작가와의 만남으로 진행합니다. 2026년 9월 5일 토요일 오전 10시~12시 30분 예정이며, 장소는 송린이음터 섭외 중입니다."
+      status: "일정 확정 · 장소 섭외 예정",
+      note: "2026년 9월 5일 토요일 10:00~12:30, 최지안 작가. 장소는 송린이음터 섭외 예정입니다."
     },
     {
-      author: "최은영",
-      honorific: "최은영 작가님",
-      bookTitle: "사월의 바다",
-      bookCover: "./covers/april-sea.png",
+      district: "효행구",
+      author: "",
+      honorific: "선정도서 작가",
+      bookTitle: "추후 공지",
+      bookCover: "",
       authorPhoto: "",
-      status: "섭외 중",
-      note: "효행구·병점구·동탄구 작가와의 만남은 선정도서 작가 섭외와 일정 조율을 진행 중입니다."
+      status: "추후 공지 예정",
+      note: "작가, 일정, 장소는 확정되는 대로 안내합니다."
+    },
+    {
+      district: "병점구",
+      author: "김지형",
+      honorific: "김지형 작가님",
+      bookTitle: "미세미세한 맛 플라수프",
+      bookCover: "./covers/plastic-soup.png",
+      authorPhoto: "",
+      status: "일정 확정",
+      note: "2026년 8월 13일 목요일 10:00~12:00, 김지형 작가. 장소는 크로바작은도서관입니다."
+    },
+    {
+      district: "동탄구",
+      author: "김지형",
+      honorific: "김지형 작가님",
+      bookTitle: "미세미세한 맛 플라수프",
+      bookCover: "./covers/plastic-soup.png",
+      authorPhoto: "",
+      status: "일정 확정",
+      note: "2026년 8월 12일 수요일 10:00~12:30, 김지형 작가. 장소는 호반써밋동탄 작은도서관입니다. 경기도 화성시 동탄신리천로4길 48 호반써밋동탄."
     }
   ],
   books: [
@@ -153,6 +184,7 @@ function mergeSiteData(base, override) {
     forms: { ...base.forms, ...(override.forms || {}) },
     notice: { ...base.notice, ...(override.notice || {}) },
     howToEnjoy: Array.isArray(override.howToEnjoy) ? override.howToEnjoy : base.howToEnjoy,
+    booths: Array.isArray(override.booths) ? override.booths : base.booths,
     authorMeetings: Array.isArray(override.authorMeetings) ? override.authorMeetings : base.authorMeetings,
     books: mergedBooks
   };

@@ -122,8 +122,8 @@ function bindPosterSlider() {
   const dots = Array.from(document.querySelectorAll(".poster-dot"));
   const caption = document.getElementById("posterCaption");
   const captions = [
-    "선정도서 15권을 한눈에 확인할 수 있습니다. 클릭하면 안내 포스터로 전환됩니다.",
-    "참가 안내와 대회 정보를 확인할 수 있습니다. 클릭하면 선정도서 포스터로 전환됩니다."
+    "선정도서 15권을 한눈에 확인할 수 있습니다. 클릭하면 행사 안내 포스터로 전환됩니다.",
+    "최신 행사 시간표, 체험부스, 작가 사인회와 시상 정보를 확인할 수 있습니다."
   ];
   let current = 0;
   let timer;
@@ -191,9 +191,23 @@ function renderHowToEnjoy() {
   if (!root) return;
   root.innerHTML = siteData.howToEnjoy.map((item, index) => `
     <article class="howto-card">
-      <span>${String(index + 1).padStart(2, "0")}</span>
+      <span class="howto-number">${String(index + 1).padStart(2, "0")}</span>
+      <strong class="howto-icon">${escapeHtml(item.icon || "확인")}</strong>
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.text)}</p>
+    </article>
+  `).join("");
+}
+
+function renderBooths() {
+  const root = document.getElementById("boothList");
+  if (!root) return;
+  root.innerHTML = siteData.booths.map((booth, index) => `
+    <article class="booth-detail-card${booth.sponsor ? " is-sponsor" : ""}">
+      <span class="booth-number">${String(index + 1).padStart(2, "0")}</span>
+      ${booth.sponsor ? '<span class="booth-sponsor">체험부스 후원</span>' : ""}
+      <h3>${escapeHtml(booth.library)}</h3>
+      <p>${escapeHtml(booth.activity)}</p>
     </article>
   `).join("");
 }
@@ -210,13 +224,20 @@ function renderAuthorMeetings() {
         <span>사진 준비 중</span>
       </div>
     `;
+    const cover = meeting.bookCover ? `
+      <img src="${escapeHtml(meeting.bookCover)}" alt="${escapeHtml(meeting.bookTitle)} 표지">
+    ` : `
+      <div class="author-cover-placeholder">
+        <strong>도서</strong>
+        <span>추후 공지</span>
+      </div>
+    `;
     return `
       <article class="author-card">
         <div class="author-photo">${photo}</div>
-        <div class="author-book-cover">
-          <img src="${escapeHtml(meeting.bookCover)}" alt="${escapeHtml(meeting.bookTitle)} 표지">
-        </div>
+        <div class="author-book-cover">${cover}</div>
         <div class="author-info">
+          <span class="author-district">${escapeHtml(meeting.district || "권역")}</span>
           <span class="status planned">${escapeHtml(meeting.status)}</span>
           <h3>${escapeHtml(meeting.honorific || meeting.author)}</h3>
           <p class="author-book">선정도서 『${escapeHtml(meeting.bookTitle)}』</p>
@@ -240,6 +261,7 @@ renderBooks();
 renderNotices();
 renderButtons();
 renderHowToEnjoy();
+renderBooths();
 renderAuthorMeetings();
 bindBookCards();
 bindModal();

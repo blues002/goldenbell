@@ -991,7 +991,7 @@ main {
 
 .author-card {
   display: grid;
-  grid-template-columns: 132px 118px 1fr;
+  grid-template-columns: 118px minmax(0, 1fr);
   gap: 18px;
   align-items: center;
   padding: 24px;
@@ -1001,44 +1001,12 @@ main {
   box-shadow: 0 12px 30px rgba(7, 29, 79, 0.08);
 }
 
-.author-photo,
 .author-book-cover {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background: #edf5ff;
-}
-
-.author-photo {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-}
-
-.author-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.author-placeholder {
-  display: grid;
-  place-items: center;
-  gap: 4px;
-  width: 100%;
-  height: 100%;
-  color: var(--navy);
-}
-
-.author-placeholder strong {
-  font-size: 44px;
-  line-height: 1;
-}
-
-.author-placeholder span {
-  font-size: 13px;
-  font-weight: 900;
 }
 
 .author-book-cover {
@@ -1317,7 +1285,6 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .author-photo,
   .author-book-cover {
     margin-inline: auto;
   }

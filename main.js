@@ -216,14 +216,6 @@ function renderAuthorMeetings() {
   const root = document.getElementById("authorMeetingCards");
   if (!root) return;
   root.innerHTML = siteData.authorMeetings.map((meeting) => {
-    const photo = meeting.authorPhoto ? `
-      <img src="${escapeHtml(meeting.authorPhoto)}" alt="${escapeHtml(meeting.honorific || meeting.author)} 사진">
-    ` : `
-      <div class="author-placeholder" aria-label="작가 사진 준비 중">
-        <strong>${escapeHtml((meeting.author || "?").slice(0, 1))}</strong>
-        <span>사진 준비 중</span>
-      </div>
-    `;
     const cover = meeting.bookCover ? `
       <img src="${escapeHtml(meeting.bookCover)}" alt="${escapeHtml(meeting.bookTitle)} 표지">
     ` : `
@@ -234,7 +226,6 @@ function renderAuthorMeetings() {
     `;
     return `
       <article class="author-card">
-        <div class="author-photo">${photo}</div>
         <div class="author-book-cover">${cover}</div>
         <div class="author-info">
           <span class="author-district">${escapeHtml(meeting.district || "권역")}</span>
